@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'services/hello-world-nodejs/*'
+    # paths:
+    #   - 'services/hello-world-nodejs/*'
   pull_request:
     branches:
       - master
