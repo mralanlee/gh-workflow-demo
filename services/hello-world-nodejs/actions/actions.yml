@@ -5,7 +5,7 @@ on:
     branches:
       - master
   paths:
-    - ../*
+    - ./services/hello-world-nodejs
 
 env:
   DOCKER_USERNAME: ${{secrets.DOCKER_HUB_USERNAME}}
