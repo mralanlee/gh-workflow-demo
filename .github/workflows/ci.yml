@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - 'services/hello-world-nodejs/*'
+    paths:
+      - 'services/hello-world-nodejs/*'
   pull_request:
     branches:
       - master
@@ -24,6 +24,7 @@ jobs:
           node-version: '12.x'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+        working-directory: ./services/hello-world-nodejs
       - name: Build TypeScript
         run: yarn build
-
+        working-directory: ./services/hello-world-nodejs
