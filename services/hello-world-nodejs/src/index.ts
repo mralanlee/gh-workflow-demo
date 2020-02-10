@@ -10,4 +10,6 @@ app.get('/', (req:any, res:any) => {
   </html>`)
 })
 
+console.log('Running')
+
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
