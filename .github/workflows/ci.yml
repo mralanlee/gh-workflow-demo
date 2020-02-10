@@ -16,7 +16,5 @@ jobs:
         uses: actions/checkout@master
       - name: Build Golang
         uses: ./services/url-shortener/actions
-        needs: checkout
       - name: Build
         uses: ./services/hello-world-nodejs/actions
-        needs: checkout
