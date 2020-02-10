@@ -15,8 +15,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: checkout/checkout@master
       - name: install Go
         uses: actions/setup-go@v1
         with:

@@ -12,6 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@master
       - name: Build Golang
         uses: ../../services/url-shortener/actions
       - name: Build
