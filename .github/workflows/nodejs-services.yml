@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - services/hello-world-nodejs/**/*.ts
+      - services/hello-world-nodejs/*
 
 jobs:
   build:
