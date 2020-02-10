@@ -19,5 +19,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build TypeScript
         run: yarn build
-    # TODO: Push to docker registry
 
