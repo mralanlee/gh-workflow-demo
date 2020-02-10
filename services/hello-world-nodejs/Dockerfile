@@ -7,7 +7,8 @@ RUN yarn install \
       --frozen-lockfile
 
 RUN yarn run build
-RUN yarn run postbuild
+
+# COMMENT TEST
 
 FROM node:12.6.0-slim AS release
 WORKDIR /app
