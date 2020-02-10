@@ -5,12 +5,14 @@ on:
     branches:
       - master
     paths:
-      - ./services/hello-world-nodejs/**/*.ts
+      - services/hello-world-nodejs/**/*.ts
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@master
       - name: use nodejs
         uses: actions/setup-node@master
         with:
