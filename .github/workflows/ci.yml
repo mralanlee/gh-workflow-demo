@@ -3,9 +3,14 @@ name: Build Hello World - Node.js
 on:
   push:
     branches:
-    - master
+      - master
     paths:
-    - 'services/hello-world-nodejs/*'
+      - 'services/hello-world-nodejs/*'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'services/hello-world-nodejs/*'
 
 jobs:
   build:
