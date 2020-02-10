@@ -1,0 +1,29 @@
+name: Build Hello World - Node.js
+
+on:
+  push:
+    branches:
+      - master
+  paths:
+    - ../*
+
+env:
+  DOCKER_USERNAME: ${{secrets.DOCKER_HUB_USERNAME}}
+  DOCKER_PASSWORD: ${{secrets.DOCKER_HUB_PASSWORD}}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: checkout/checkout@master
+      - name: use nodejs
+        uses: actions/setup-node@master
+        with:
+          node-version: '12.x'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build TypeScript
+        run: yarn build
+    # TODO: Push to docker registry
+
