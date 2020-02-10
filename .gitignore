@@ -1,3 +1,4 @@
 **/**/mysql-data
 **/**/venv
 .vim
+node_modules
